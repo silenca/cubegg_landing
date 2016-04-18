@@ -1661,6 +1661,8 @@ $(document).ready(function(){
 	}
 
 	$('.btn-sign-up').on('click', function (event) {
+		var $this = $(this);
+
 		$('form[name="signup"]').validate({
 			submitHandler: function(form) {
 		        var data = $(form).serialize();
@@ -1668,10 +1670,10 @@ $(document).ready(function(){
 		            '../form-register.php',
 		            data,
 		            function() {
-		            	console.log('succes');
 		                changeTopic(event);
 		                hideFields(event);
 		                closeForm(event);
+		                $this.hide();
 		            }
 		        );
 		    }
