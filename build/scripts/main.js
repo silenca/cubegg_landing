@@ -1563,7 +1563,7 @@ $(document).ready(function(){
 
 	// login links
 	$('.loginLinks a').on('click', function(event){
-		event.preventDefault();
+		// event.preventDefault();
 
 		var $this = $(this),
 			popup = $('.' + $this.attr('data-target')),
@@ -1731,7 +1731,7 @@ $(document).ready(function(){
 
 	// navigation
 	$('.slideNavigation a').on('click', function(event){
-		event.preventDefault();
+		// event.preventDefault();
 
 		var $this = $(this),
 			slides = $('.nav_slide_box'),
@@ -1822,7 +1822,7 @@ $(document).ready(function(){
 
 	// mobile navigation
 	$('.mobile_menu_button').on('click', function(event){
-		event.preventDefault();
+		// event.preventDefault();
 
 		openMobileNav();
 	});
