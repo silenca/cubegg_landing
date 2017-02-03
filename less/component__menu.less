@@ -1,0 +1,103 @@
+/* j-menu
+------------------------------------------------------------------- */
+.j-menu {
+	.var () { @root: ~'.j-menu'; }.var;
+    display: flex;
+    align-items: center;
+
+    @media @max-767 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    &__link {
+        font-size: 18px;
+        margin-left: 60px;
+        color: @menu__color;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        font-family: 'Ubuntu-Bold';
+        position: relative;
+        .transition();
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            .scale();
+        }
+
+        @media @max-1520 {
+            font-size: 16px;
+            margin-left: 40px;
+        }
+
+        @media @min-768 and @max-990 {
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        @media @max-767 {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            text-align: left;
+            margin-left: 0;
+            padding: 10px 25px;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &--active {
+            color: @c-white;
+
+            &:after {
+                background: @c-white;
+                .scale--open();
+            }
+        }
+
+        &--blue {
+            color: @c-blue;
+        }
+
+        &:not(&--active):hover {
+            color: @c-white;
+
+            &:after {
+                background: @menu__color;
+                .scale--open();
+            }
+        }
+    }
+}
+
+/* influence on j-menu
+------------------------------------------------------------------- */
+.j-footer .j-menu {
+    padding-bottom: 100px;
+
+    &__link {
+        color: @c-white;
+        font-size: 22px;
+        font-family: 'GothamPro';
+        margin-left: 80px;
+
+        @media @max-767 {
+            margin: 0;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:after {
+            background: @c-white !important;
+        }
+    }
+}

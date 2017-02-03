@@ -1,0 +1,237 @@
+/* j-form
+------------------------------------------------------------------- */
+.j-form {
+    .var () { @root: ~'.j-form'; }.var;
+    width: 100%;
+    max-width: 700px;
+    padding: 60px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: @blue__bg;
+    box-shadow: 0 0 0 1px @blue__border;
+    position: relative;
+
+    @media @max-767 {
+        padding: 15px;
+    }
+
+    textarea,
+    [type="text"],
+    [type="email"] {
+        width: 100%;
+    }
+
+    &__success {
+        display: none;
+        color: @c-white;
+        text-align: center;
+
+        &__h1, &__h2 {
+            font-family: 'GothamPro-Bold';
+        }
+
+        &__h1 {
+            font-size: 60px;
+            text-transform: uppercase;
+
+            @media @max-1280 {
+                font-size: 50px;
+            }
+
+            @media @max-767 {
+                font-size: 28px;
+            }
+        }
+
+        &__h2 {
+            font-size: 46px;
+            margin-top: 10%;
+
+            @media @max-1280 {
+                font-size: 40px;
+            }
+
+            @media @max-767 {
+                font-size: 24px;
+            }
+        }
+
+        &__more {
+            font-size: 36px;
+            cursor: pointer;
+            margin-top: 20%;
+            text-decoration: underline;
+            .transition();
+
+            @media @max-1280 {
+                font-size: 28px;
+            }
+
+            @media @max-767 {
+                font-size: 20px;
+            }
+
+            &:hover {
+                color: @c-blue;
+            }
+        }
+    }
+}
+
+/* j-radio & j-checkbox
+------------------------------------------------------------------- */
+// .j-radio,
+// .j-checkbox {
+// 	display: flex;
+// 	align-items: center;
+// 	margin-top: 5px;
+// 	position: relative;
+
+// 	&:first-of-type {
+// 		margin-top: 0;
+// 	}
+
+// 	&__icon {
+// 		min-width: 16px;
+// 		min-height: 16px;
+// 		margin-right: 5px;
+// 		position: relative;
+// 		background: @radio-checkbox--bg;
+// 		border: 1px solid @radio-checkbox--border;
+
+// 		.icon {
+// 			top: 0;
+// 			left: 0;
+// 			right: 0;
+// 			bottom: 0;
+// 			opacity: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 			margin: auto;
+// 			padding: 2px;
+// 			position: absolute;
+// 		}
+// 	}
+
+// 	&:hover .icon {
+// 		opacity: 1;
+// 		color: @radio-checkbox--border;
+// 	}
+// }
+
+// .j-radio {
+// 	.var () { @radio: ~'.j-radio'; }.var;
+
+// 	@{radio}__icon {
+// 		border-radius: @radio--radius;
+// 	}
+
+// 	[type="radio"] {
+// 		top: 0;
+// 		left: 0;
+// 		opacity: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		cursor: pointer;
+// 		position: absolute;
+
+// 		&:checked ~ @{radio}__icon .icon {
+// 			opacity: 1;
+// 			color: @radio-checkbox--active;
+// 		}
+// 	}
+// }
+
+// .j-checkbox {
+// 	.var () { @checkbox: ~'.j-checkbox'; }.var;
+
+// 	@{checkbox}__icon {
+// 		border-radius: @checkbox--radius;
+// 	}
+
+// 	[type="checkbox"] {
+// 		top: 0;
+// 		left: 0;
+// 		opacity: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		cursor: pointer;
+// 		position: absolute;
+
+// 		&:checked ~ @{checkbox}__icon .icon {
+// 			opacity: 1;
+// 			color: @radio-checkbox--active;
+// 		}
+// 	}
+// }
+
+// /* select
+// ------------------------------------------------------------------- */
+// .j-select {
+// 	.var () { @root: ~'.j-select'; }.var;
+// 	position: relative;
+
+// 	&__selected {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		height: 35px;
+// 		padding: 0 10px;
+// 		cursor: pointer;
+
+// 		&__value {
+// 		    width: 100%;
+// 			overflow: hidden;
+// 			white-space: nowrap;
+// 			padding-right: 10px;
+// 			text-overflow: ellipsis;
+// 		}
+
+// 		.icon {
+// 			transition: @select--transition;
+// 		}
+// 	}
+
+// 	&__dropdown {
+// 		right: 0;
+// 		top: 100%;
+// 		width: 100px;
+// 		z-index: 9;
+// 		overflow: hidden;
+// 		position: absolute;
+// 		color: @c-black;
+// 		background: @select--bg;
+// 		transition: all .3s ease-in-out;
+// 		// hidden
+// 		opacity: 0;
+// 		visibility: hidden;
+// 		transform: scaleY(0);
+// 		transform-origin: top left;
+
+// 		&__scroll {
+// 			overflow: auto;
+// 			max-height: 150px;
+// 		}
+
+// 		&__item {
+// 			cursor: pointer;
+// 			padding: 8px 10px;
+
+// 			&:hover {
+// 				background: @select--hover-bg;
+// 			}
+// 		}
+// 	}
+
+// 	&--open {
+// 		.icon {
+// 			transform: rotate(180deg);
+// 		}
+
+// 		@{root}__dropdown {
+// 			opacity: 1;
+// 			visibility: visible;
+// 			transform: scaleY(1);
+// 		}
+// 	}
+// }

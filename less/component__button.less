@@ -1,0 +1,91 @@
+/* j-button
+------------------------------------------------------------------- */
+.j-button {
+    .var () { @root: ~'.j-button'; }.var;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 50px;
+    color: @c-white;
+    font-size: 18px;
+    background: @c-blue;
+    border-radius: @border-radius;
+    .transition(background);
+
+    > * {
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        font-family: 'Ubuntu';
+    }
+
+    &:hover {
+        background: darken(@c-blue, 5%);
+    }
+
+    &:active {
+        .click();
+    }
+
+    &--transparent {
+        background: transparent;
+        box-shadow: 0 0 0 1px @c-white;
+
+        &:hover {
+            background: transparent;
+            box-shadow: 0 0 0 2px @c-white;
+        }
+    }
+}
+
+
+/* influence on j-button
+------------------------------------------------------------------- */
+.j-body__index .j-button {
+    width: auto;
+    height: 65px;
+    margin: 40px 0;
+    padding: 0 50px;
+    font-size: 28px;
+    border-radius: 10px;
+    font-family: 'Ubuntu-Bold';
+
+    @media @max-1520 {
+        height: 55px;
+        font-size: 22px;
+    }
+
+    @media @max-h-800 {
+        height: 50px;
+        margin: 25px 0;
+        font-size: 20px;
+    }
+
+    @media @max-767 {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.j-price .j-button {
+    width: 135px;
+    height: 35px;
+    font-size: 12px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.j-form__button {
+    text-align: right;
+
+    @media @max-767 {
+        text-align: center;
+
+        .j-button {
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+        }
+    }
+}

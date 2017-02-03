@@ -1,0 +1,73 @@
+/* j-egg
+------------------------------------------------------------------- */
+.j-egg {
+    .var () { @root: ~'.j-egg'; }.var;
+    margin-top: -140px;
+    text-align: center;
+
+    @media @min-1025 and @max-1520 {
+        img {
+            max-width: 100px;
+        }
+    }
+
+    @media @min-h-801 {
+        img {
+            max-width: none;
+        }
+    }
+
+    @media @max-767 {
+        padding-top: 50px;
+    }
+
+    &__wrap {
+        height: 100%;
+        width: 100%;
+        .center-absolute();
+
+        img {
+            .center-absolute();
+            .transition();
+        }
+    }
+
+    &__progress {
+        @media @min-1025 {
+            .translateY-bottom();
+        }
+    }
+
+    &__static {
+        @media @max-1024 {
+            display: none;
+        }
+    }
+
+    &--mob {
+        @media @min-768 {
+            display: none;
+        }
+    }
+
+    &--pc {
+        @media @max-767 {
+            display: none;
+        }
+    }
+}
+
+/* influence on j-egg
+------------------------------------------------------------------- */
+.j-full__3.j-full--active .j-egg,
+.j-full__4.j-full--active .j-egg,
+.j-full__5.j-full--active .j-egg,
+.j-full__6.j-full--active .j-egg {
+    &__static {
+        .translateY-bottom();
+    }
+
+    &__progress {
+        .translateY-bottom--open();
+    }
+}

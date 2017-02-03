@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+// font
+.include-font();
+
+/* reset
+------------------------------------------------------------------- */
+body {
+    text-size-adjust: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &[href^="tel"] {
+        cursor: default;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: bottom;
+}
+
+svg:not(:root) {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+[class*="icon--"] {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    display: inline-block;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: inherit;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+textarea,
+[type="url"],
+[type="text"],
+[type="email"],
+[type="search"],
+[type="password"] {
+    box-shadow: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+[type="radio"],
+[type="submit"],
+[type="checkbox"],
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+button,
+[type="submit"] {
+    border: 0;
+    color: inherit;
+    background: none;
+    font-size: inherit;
+    // display: inline-flex;
+}
+
+[disabled] {
+    opacity: .3;
+    cursor: default;
+}
+
+::-webkit-search-decoration,
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration {
+    display: none;
+}
